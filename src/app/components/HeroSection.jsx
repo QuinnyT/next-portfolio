@@ -29,7 +29,7 @@ const HeroSection = () => {
   const [selectedTab, setSelectedTab] = useState(1);
   return (
     <section className="lg:py-16 min-h-[75vh] ">
-      <div className="sm:grid-cols-12 col-span-8 place-self-center text-center sm:text-left justify-self-start">
+      <div className="sm:grid-cols-12 col-span-8 place-self-center text-center sm:text-left justify-self-start text-white">
         {/* <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -43,9 +43,9 @@ const HeroSection = () => {
           <h5 className="italic text-center">Email: wx119990101@163.com</h5>
           <div className="flex justify-center mt-20">
             <Tabs value={selectedTab} onChange={(event, value) => {setSelectedTab(value)}} aria-label="basic tabs example">
-              <Tab label="Skills"  />
-              <Tab label="Education"  />
-              <Tab label="Info"  />
+              <Tab  sx={{ color: '#A89F9F' }} label="Skills"  />
+              <Tab  sx={{ color: '#A89F9F' }} label="Education"  />
+              <Tab  sx={{ color: '#A89F9F' }} label="Info"  />
             </Tabs>
           </div>
           <div className="flex justify-center">
