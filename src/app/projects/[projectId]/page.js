@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function ProjectPage({ params }) {
     const project = findProject(params.projectId);
     return (
-        <>
+        <div className='container mt-24 mx-auto px-12 py-4'>
             <h2 className="text-center text-4xl font-bold text-black mt-4 mb-8 md:mb-12">
               {project.title}
             </h2>
@@ -33,7 +33,7 @@ export default function ProjectPage({ params }) {
                   </div>
                ))}
             </div>
-        </>
+        </div>
         
     );
   }
