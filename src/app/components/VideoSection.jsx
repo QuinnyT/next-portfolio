@@ -11,10 +11,10 @@ const VideoSection = () => {
       </h2>
       <h6 className="italic">2024</h6>
       <div className="flex justify-center mt-4">
-        <video width="800" controls>
-          <source src="/videos/wxl.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {/* <video width="800" controls> */}
+          <iframe height="500" width="800"  src="https://player.youku.com/embed/XNjQxNjYzODMyMA==" frameborder="0" allowfullscreen />
+          {/* Your browser does not support the video tag. */}
+        {/* </video> */}
       </div>
     </section>
   );
