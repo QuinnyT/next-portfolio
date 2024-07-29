@@ -12,7 +12,7 @@ const VideoSection = () => {
       <h6 className="italic">2024</h6>
       <div className="flex justify-center mt-4">
         <video width="800" controls>
-          <source src="/videos/test.mkv" type="video/mp4" />
+          <source src="/videos/wxl.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
