@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 
-import Head from 'next/head';
+import CryptoJS from "crypto-js";
 
 import { executeScript } from '@/js/ykuapi'
 
@@ -22,10 +22,16 @@ const VideoSection = () => {
   useEffect(() => {
     // getToken()
     executeScript();
+
+    const password = '123456';
+    const clientId = 'e4c803eeb5d4a471';
+    const hash = CryptoJS.MD5(password + clientId).toString();
+
     var player = new YKU.Player('youkuplayer',{
       styleid: '0',
       client_id: 'e4c803eeb5d4a471',
       vid: 'XNjQxNjYzODMyMA==',
+      password: hash,
       newPlayer: true
       });
   }, [])
@@ -33,10 +39,6 @@ const VideoSection = () => {
   return (
     <section id="video" className="text-center h-[80vh]">
       
-      <Head>
-        {/* 这里可以加入你的 CDN 脚本 */}
-        <script type="text/javascript" src="https://player.youku.com/jsapi" defer  ></script>
-      </Head>
       <h2 className=" text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         Portfolio
       </h2>
