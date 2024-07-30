@@ -4,7 +4,7 @@
  * for phone
  */
 var YK = {};
-YK.https = location.protocol;
+YK.https = window.location.protocol;
 window.YKU = {};
 var YKP = {
   playerType: "",
